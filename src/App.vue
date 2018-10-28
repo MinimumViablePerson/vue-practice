@@ -1,12 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id='nav'>
+      <router-link to='/counter'>COUNTER</router-link> | 
+      <router-link to='/todos'>TODOS</router-link> | 
+      <router-link to='/posts'>POSTS</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
+
+<script>
+import Counter from './views/Counter.vue'
+import Todos from './views/Todos.vue'
+import Posts from './views/Posts.vue'
+
+export default {
+  components: {
+    Counter,
+    Todos,
+    Posts
+  }
+}
+</script>
 
 <style>
 #app {
@@ -28,4 +43,5 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
